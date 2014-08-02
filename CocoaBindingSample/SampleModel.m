@@ -15,6 +15,18 @@
 
 @implementation SampleModel
 
+-(id) init
+{
+    self = [super init];
+    if (self)
+    {
+        _val1 = [NSNumber numberWithDouble:0];
+        _val2 = [NSNumber numberWithDouble:0];
+    }
+    
+    return self;
+}
+
 -(NSNumber*) avg_val
 {
     return [NSNumber numberWithDouble:([self.val1 doubleValue] + [self.val2 doubleValue])/2.0];
@@ -24,5 +36,17 @@
 {
     return [NSNumber numberWithDouble:([self.val1 doubleValue] + [self.val2 doubleValue])];
 }
+
+#pragma mark - KVO
+
++(NSSet*) keyPathsForValuesAffectingValueForKey:(NSString*)key
+{
+    if ([key isEqualToString:@"avg_val"] || [key isEqualToString:@"sum_val"])
+    {
+        return [NSSet setWithObjects:@"val1", @"val2", nil];
+    }
+    return nil;
+}
+
 
 @end

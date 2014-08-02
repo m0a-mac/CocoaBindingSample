@@ -17,6 +17,12 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="2hy-mT-FOT" customClass="SampleModel"/>
+        <objectController id="3Ys-5f-O6c">
+            <connections>
+                <outlet property="content" destination="2hy-mT-FOT" id="Qyf-B1-gUy"/>
+            </connections>
+        </objectController>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="CocoaBindingSample" id="1Xt-HY-uBw">
@@ -676,32 +682,44 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJ1-F4-ksV">
-                        <rect key="frame" x="46" y="80" width="25" height="17"/>
+                        <rect key="frame" x="46" y="80" width="43" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.0" id="yh9-RU-2MK">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val1" id="pmS-KA-mmH"/>
+                        </connections>
                     </textField>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ooc-Mn-roK">
                         <rect key="frame" x="109" y="78" width="230" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="rGv-Xc-UI0"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="rGv-Xc-UI0"/>
+                        <connections>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val1" id="2Mw-dc-pnZ"/>
+                        </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kqj-8Z-MGz">
-                        <rect key="frame" x="46" y="55" width="25" height="17"/>
+                        <rect key="frame" x="46" y="55" width="59" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.0" id="et0-IP-cyR">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val2" id="lvL-T3-4lb"/>
+                        </connections>
                     </textField>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-Rv-hk1">
                         <rect key="frame" x="109" y="53" width="230" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="6Qr-5m-G69"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="2" doubleValue="2" tickMarkPosition="above" sliderType="linear" id="6Qr-5m-G69"/>
+                        <connections>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val2" id="stF-XG-jKe"/>
+                        </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gy-Iy-CVO">
                         <rect key="frame" x="48" y="20" width="104" height="17"/>
@@ -711,6 +729,9 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.avg_val" id="fV3-BT-1jp"/>
+                        </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whd-KZ-MIP">
                         <rect key="frame" x="212" y="20" width="104" height="17"/>
@@ -720,6 +741,9 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.sum_val" id="toZ-a2-ssr"/>
+                        </connections>
                     </textField>
                 </subviews>
             </view>
