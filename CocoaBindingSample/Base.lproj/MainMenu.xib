@@ -690,7 +690,11 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val1" id="pmS-KA-mmH"/>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val1" id="Fee-tW-iWW">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NumberFormatter</string>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ooc-Mn-roK">
@@ -710,7 +714,11 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val2" id="lvL-T3-4lb"/>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.val2" id="14O-bq-G8u">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NumberFormatter</string>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-Rv-hk1">
@@ -730,7 +738,11 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.avg_val" id="fV3-BT-1jp"/>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.avg_val" id="BaR-T4-VPK">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">AvgValueTransformer</string>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whd-KZ-MIP">
@@ -742,7 +754,11 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.sum_val" id="toZ-a2-ssr"/>
+                            <binding destination="3Ys-5f-O6c" name="value" keyPath="selection.sum_val" id="amu-GC-Qgf">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">SumValueTransformer</string>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                 </subviews>

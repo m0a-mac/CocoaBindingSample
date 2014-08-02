@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F090F17198CA09400FE6ABB /* AvgValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F090F16198CA09400FE6ABB /* AvgValueTransformer.m */; };
+		4F090F1A198CA2B900FE6ABB /* NumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F090F19198CA2B900FE6ABB /* NumberFormatter.m */; };
+		4F090F1D198CA40300FE6ABB /* SumValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F090F1B198CA40300FE6ABB /* SumValueTransformer.m */; };
 		4F2DCF84198C92540050257C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2DCF83198C92540050257C /* Cocoa.framework */; };
 		4F2DCF8E198C92540050257C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F2DCF8C198C92540050257C /* InfoPlist.strings */; };
 		4F2DCF90198C92540050257C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DCF8F198C92540050257C /* main.m */; };
@@ -32,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F090F15198CA09400FE6ABB /* AvgValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvgValueTransformer.h; sourceTree = "<group>"; };
+		4F090F16198CA09400FE6ABB /* AvgValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvgValueTransformer.m; sourceTree = "<group>"; };
+		4F090F18198CA2B900FE6ABB /* NumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberFormatter.h; sourceTree = "<group>"; };
+		4F090F19198CA2B900FE6ABB /* NumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberFormatter.m; sourceTree = "<group>"; };
+		4F090F1B198CA40300FE6ABB /* SumValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SumValueTransformer.m; sourceTree = "<group>"; };
+		4F090F1C198CA40300FE6ABB /* SumValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SumValueTransformer.h; sourceTree = "<group>"; };
 		4F2DCF80198C92540050257C /* CocoaBindingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaBindingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2DCF83198C92540050257C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4F2DCF86198C92540050257C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -76,6 +85,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F090F14198CA05800FE6ABB /* ValueTransformers */ = {
+			isa = PBXGroup;
+			children = (
+				4F090F1B198CA40300FE6ABB /* SumValueTransformer.m */,
+				4F090F1C198CA40300FE6ABB /* SumValueTransformer.h */,
+				4F090F15198CA09400FE6ABB /* AvgValueTransformer.h */,
+				4F090F16198CA09400FE6ABB /* AvgValueTransformer.m */,
+				4F090F18198CA2B900FE6ABB /* NumberFormatter.h */,
+				4F090F19198CA2B900FE6ABB /* NumberFormatter.m */,
+			);
+			name = ValueTransformers;
+			sourceTree = "<group>";
+		};
 		4F2DCF77198C92540050257C = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +142,7 @@
 		4F2DCF89198C92540050257C /* CocoaBindingSample */ = {
 			isa = PBXGroup;
 			children = (
+				4F090F14198CA05800FE6ABB /* ValueTransformers */,
 				4F2DCF95198C92540050257C /* AppDelegate.h */,
 				4F2DCF96198C92540050257C /* AppDelegate.m */,
 				4F2DCF98198C92550050257C /* MainMenu.xib */,
@@ -259,6 +282,9 @@
 			files = (
 				4F2DCF97198C92540050257C /* AppDelegate.m in Sources */,
 				4F2DCF90198C92540050257C /* main.m in Sources */,
+				4F090F1A198CA2B900FE6ABB /* NumberFormatter.m in Sources */,
+				4F090F1D198CA40300FE6ABB /* SumValueTransformer.m in Sources */,
+				4F090F17198CA09400FE6ABB /* AvgValueTransformer.m in Sources */,
 				4F2DCFB9198C92A20050257C /* SampleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +498,7 @@
 				4F2DCFB3198C92550050257C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F2DCFB4198C92550050257C /* Build configuration list for PBXNativeTarget "CocoaBindingSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +507,7 @@
 				4F2DCFB6198C92550050257C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
